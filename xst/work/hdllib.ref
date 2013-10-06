@@ -1,6 +1,6 @@
-AR adder32 arch_adder32 C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/adder32.vhd sub00/vhpl01 1381063959
-EN lab2 NULL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/LAB2.vhd sub00/vhpl04 1381063323
-AR alu arch_alu C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd sub00/vhpl03 1381063322
-EN adder32 NULL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/adder32.vhd sub00/vhpl00 1381063958
-AR lab2 structural C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/LAB2.vhd sub00/vhpl05 1381063324
-EN alu NULL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd sub00/vhpl02 1381063960
+AR adder32 arch_adder32 C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/adder32.vhd sub00/vhpl01 1381065061
+EN lab2 NULL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/LAB2.vhd sub00/vhpl04 1381065064
+AR alu arch_alu C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd sub00/vhpl03 1381065063
+EN adder32 NULL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/adder32.vhd sub00/vhpl00 1381065060
+AR lab2 structural C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/LAB2.vhd sub00/vhpl05 1381065065
+EN alu NULL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd sub00/vhpl02 1381065062

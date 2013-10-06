@@ -65,18 +65,25 @@ Signal temp_debug_unsignedsubtractor : std_logic_vector(31 downto 0);
 
 Signal final_Operand1: std_logic_vector(31 downto 0);
 Signal final_Operand2: std_logic_vector(31 downto 0);
+Signal final_Operand3: std_logic_vector(31 downto 0);
+Signal operand3: std_logic_vector(31 downto 0);
 begin
  
 final_Operand1 <= not operand1 + 1 when operand1(31)='1' else
 						operand1 when operand1(31)='0' ;
 						
 final_Operand2 <= not operand2 + 1 when operand2(31)='1' else
-						operand2 when operand2(31)='0' ;
+						operand2 when operand2(31)='0';
+						
 
+final_operand3 <= not final_operand2 +1;
+operand3 <= not operand2 +1;
+
+					
 adder : adder32 port map( Operand1 ,Operand2 , temp_result_adder,temp_debug_adder,clk);
-subtractor : adder32 port map( Operand1 ,not(Operand2)+1 , temp_result_subtractor,temp_debug_subtractor,clk);
+subtractor : adder32 port map( Operand1 ,operand3 , temp_result_subtractor,temp_debug_subtractor,clk);
 adder_u : adder32 port map( final_Operand1 ,final_Operand2 , temp_result_unsignedadder,temp_debug_unsignedadder,clk);
-subtractor_u : adder32 port map( final_Operand1 ,not(final_Operand2)+1 , temp_result_unsignedsubtractor,temp_debug_unsignedsubtractor,clk);
+subtractor_u : adder32 port map( final_Operand1 , final_operand3, temp_result_unsignedsubtractor,temp_debug_unsignedsubtractor,clk);
 
 process (Clk)
 begin  

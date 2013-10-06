@@ -34,19 +34,19 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 ================================================================================
 Timing constraint: TS_Clk = PERIOD TIMEGRP "TNM_Clk" 16 MHz HIGH 50%;
 
- 175619 paths analyzed, 5048 endpoints analyzed, 0 failing endpoints
+ 238363 paths analyzed, 5028 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  15.816ns.
+ Minimum period is  15.460ns.
 --------------------------------------------------------------------------------
 
 Paths for end point mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1 (RAMB16_X0Y8.WEB2), 213 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     46.684ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     47.040ns (requirement - (data path - clock path skew + uncertainty))
   Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE (FF)
   Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1 (RAM)
   Requirement:          62.500ns
-  Data Path Delay:      15.688ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.128ns (0.563 - 0.691)
+  Data Path Delay:      15.352ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.108ns (0.563 - 0.671)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
@@ -55,90 +55,178 @@ Slack (setup path):     46.684ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y50.XQ      Tcko                  0.631   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+    SLICE_X29Y54.XQ      Tcko                  0.591   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE
-    SLICE_X27Y34.F1      net (fanout=33)       2.067   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
-    SLICE_X27Y34.COUT    Topcyf                1.195   mcs0/U0/iomodule_0/lmb_abus_Q<5>
+    SLICE_X27Y38.F1      net (fanout=33)       2.303   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+    SLICE_X27Y38.COUT    Topcyf                1.195   mcs0/U0/iomodule_0/lmb_abus_Q<4>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y49.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y50.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y50.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y51.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y51.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y52.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y52.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
+    SLICE_X22Y30.F3      net (fanout=8)        1.743   mcs0/U0/dlmb_M_ABus<0>
+    SLICE_X22Y30.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<1>
+                                                       mcs0/U0/dlmb_cntlr/lmb_we_1_and00001
+    RAMB16_X0Y8.WEB2     net (fanout=16)       5.022   mcs0/U0/dlmb_port_BRAM_WEN<1>
+    RAMB16_X0Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
+                                                       mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
+    -------------------------------------------------  ---------------------------
+    Total                                     15.352ns (6.284ns logic, 9.068ns route)
+                                                       (40.9% logic, 59.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     47.273ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE (FF)
+  Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1 (RAM)
+  Requirement:          62.500ns
+  Data Path Delay:      15.119ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.108ns (0.563 - 0.671)
+  Source Clock:         Clk_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE to mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y54.XQ      Tcko                  0.591   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE
+    SLICE_X27Y37.F1      net (fanout=33)       1.940   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+    SLICE_X27Y37.COUT    Topcyf                1.195   mcs0/U0/iomodule_0/lmb_abus_Q<5>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[30].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[30].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y35.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y35.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y36.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y36.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
+    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
+    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
+    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
+    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
+    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
+    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
+    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
+    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
+    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
+    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
+    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y49.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
+    SLICE_X27Y50.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y50.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
+    SLICE_X27Y51.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y51.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y49.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
+    SLICE_X27Y52.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y52.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
-    SLICE_X22Y30.F3      net (fanout=8)        2.529   mcs0/U0/dlmb_M_ABus<0>
+    SLICE_X22Y30.F3      net (fanout=8)        1.743   mcs0/U0/dlmb_M_ABus<0>
     SLICE_X22Y30.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<1>
                                                        mcs0/U0/dlmb_cntlr/lmb_we_1_and00001
-    RAMB16_X0Y8.WEB2     net (fanout=16)       4.638   mcs0/U0/dlmb_port_BRAM_WEN<1>
+    RAMB16_X0Y8.WEB2     net (fanout=16)       5.022   mcs0/U0/dlmb_port_BRAM_WEN<1>
     RAMB16_X0Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
                                                        mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
     -------------------------------------------------  ---------------------------
-    Total                                     15.688ns (6.454ns logic, 9.234ns route)
-                                                       (41.1% logic, 58.9% route)
+    Total                                     15.119ns (6.414ns logic, 8.705ns route)
+                                                       (42.4% logic, 57.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     46.688ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     47.277ns (requirement - (data path - clock path skew + uncertainty))
   Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE (FF)
   Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1 (RAM)
   Requirement:          62.500ns
-  Data Path Delay:      15.684ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.128ns (0.563 - 0.691)
+  Data Path Delay:      15.115ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.108ns (0.563 - 0.671)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
@@ -147,183 +235,206 @@ Slack (setup path):     46.688ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y50.XQ      Tcko                  0.631   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+    SLICE_X29Y54.XQ      Tcko                  0.591   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE
-    SLICE_X27Y34.G1      net (fanout=33)       2.080   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
-    SLICE_X27Y34.COUT    Topcyg                1.178   mcs0/U0/iomodule_0/lmb_abus_Q<5>
+    SLICE_X27Y37.G1      net (fanout=33)       1.953   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+    SLICE_X27Y37.COUT    Topcyg                1.178   mcs0/U0/iomodule_0/lmb_abus_Q<5>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y35.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y35.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y36.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y36.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
+    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
+    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
+    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
+    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
+    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
+    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
+    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
+    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
+    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
+    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
+    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y49.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
+    SLICE_X27Y50.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y50.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
+    SLICE_X27Y51.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y51.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y49.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
+    SLICE_X27Y52.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y52.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
-    SLICE_X22Y30.F3      net (fanout=8)        2.529   mcs0/U0/dlmb_M_ABus<0>
+    SLICE_X22Y30.F3      net (fanout=8)        1.743   mcs0/U0/dlmb_M_ABus<0>
     SLICE_X22Y30.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<1>
                                                        mcs0/U0/dlmb_cntlr/lmb_we_1_and00001
-    RAMB16_X0Y8.WEB2     net (fanout=16)       4.638   mcs0/U0/dlmb_port_BRAM_WEN<1>
+    RAMB16_X0Y8.WEB2     net (fanout=16)       5.022   mcs0/U0/dlmb_port_BRAM_WEN<1>
     RAMB16_X0Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
                                                        mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
     -------------------------------------------------  ---------------------------
-    Total                                     15.684ns (6.437ns logic, 9.247ns route)
-                                                       (41.0% logic, 59.0% route)
+    Total                                     15.115ns (6.397ns logic, 8.718ns route)
+                                                       (42.3% logic, 57.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     46.743ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP1_FDRE (FF)
-  Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1 (RAM)
+
+Paths for end point mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF (SLICE_X39Y38.BY), 308 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     47.075ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
+  Destination:          mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF (FF)
   Requirement:          62.500ns
-  Data Path Delay:      15.564ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.193ns (0.563 - 0.756)
+  Data Path Delay:      15.408ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.017ns (0.635 - 0.652)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP1_FDRE to mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
+  Maximum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I to mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y47.YQ      Tcko                  0.580   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_Intr_2nd_Phase<0>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP1_FDRE
-    SLICE_X27Y34.G3      net (fanout=32)       2.011   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<1>
-    SLICE_X27Y34.COUT    Topcyg                1.178   mcs0/U0/iomodule_0/lmb_abus_Q<5>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y35.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y35.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y36.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y36.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y49.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
-    SLICE_X22Y30.F3      net (fanout=8)        2.529   mcs0/U0/dlmb_M_ABus<0>
-    SLICE_X22Y30.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<1>
-                                                       mcs0/U0/dlmb_cntlr/lmb_we_1_and00001
-    RAMB16_X0Y8.WEB2     net (fanout=16)       4.638   mcs0/U0/dlmb_port_BRAM_WEN<1>
-    RAMB16_X0Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
-                                                       mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[6].RAMB16_S2_1
+    SLICE_X39Y52.YQ      Tcko                  0.580   mcs0/U0/microblaze_I/MicroBlaze_Core_I/buffer_Addr<2>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I
+    SLICE_X12Y28.F3      net (fanout=47)       5.114   mcs0/U0/microblaze_I/MicroBlaze_Core_I/buffer_Addr<1>
+    SLICE_X12Y28.X       Tilo                  0.692   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<0>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X32Y52.F2      net (fanout=21)       2.232   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<0>
+    SLICE_X32Y52.X       Tilo                  0.692   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_1
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_1
+    SLICE_X33Y49.F3      net (fanout=1)        0.575   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_1
+    SLICE_X33Y49.XB      Topxb                 1.285   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_2_2
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_4
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1
+    SLICE_X38Y39.BX      net (fanout=32)       2.581   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1/O
+    SLICE_X38Y39.X       Tbxx                  0.860   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/reg1<19>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Using_LUT4_1.Op1_MUXF5
+    SLICE_X39Y38.BY      net (fanout=1)        0.483   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op1_I
+    SLICE_X39Y38.CLK     Tdick                 0.314   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<20>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
     -------------------------------------------------  ---------------------------
-    Total                                     15.564ns (6.386ns logic, 9.178ns route)
-                                                       (41.0% logic, 59.0% route)
+    Total                                     15.408ns (4.423ns logic, 10.985ns route)
+                                                       (28.7% logic, 71.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     47.142ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
+  Destination:          mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF (FF)
+  Requirement:          62.500ns
+  Data Path Delay:      15.341ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.017ns (0.635 - 0.652)
+  Source Clock:         Clk_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I to mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y52.YQ      Tcko                  0.580   mcs0/U0/microblaze_I/MicroBlaze_Core_I/buffer_Addr<2>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I
+    SLICE_X12Y28.F3      net (fanout=47)       5.114   mcs0/U0/microblaze_I/MicroBlaze_Core_I/buffer_Addr<1>
+    SLICE_X12Y28.X       Tilo                  0.692   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<0>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X31Y49.F1      net (fanout=21)       2.347   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<0>
+    SLICE_X31Y49.X       Tilo                  0.643   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/writing<0>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_2
+    SLICE_X33Y49.F2      net (fanout=1)        0.442   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_2_1
+    SLICE_X33Y49.XB      Topxb                 1.285   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_2_2
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_4
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1
+    SLICE_X38Y39.BX      net (fanout=32)       2.581   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1/O
+    SLICE_X38Y39.X       Tbxx                  0.860   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/reg1<19>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Using_LUT4_1.Op1_MUXF5
+    SLICE_X39Y38.BY      net (fanout=1)        0.483   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op1_I
+    SLICE_X39Y38.CLK     Tdick                 0.314   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<20>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    -------------------------------------------------  ---------------------------
+    Total                                     15.341ns (4.374ns logic, 10.967ns route)
+                                                       (28.5% logic, 71.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     47.206ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
+  Destination:          mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF (FF)
+  Requirement:          62.500ns
+  Data Path Delay:      15.277ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.017ns (0.635 - 0.652)
+  Source Clock:         Clk_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I to mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y52.YQ      Tcko                  0.580   mcs0/U0/microblaze_I/MicroBlaze_Core_I/buffer_Addr<2>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I
+    SLICE_X12Y28.G3      net (fanout=47)       5.115   mcs0/U0/microblaze_I/MicroBlaze_Core_I/buffer_Addr<1>
+    SLICE_X12Y28.Y       Tilo                  0.707   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<0>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[1].SRL16E_I/Use_unisim.MB_SRL16E_I1
+    SLICE_X31Y49.F2      net (fanout=20)       2.267   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/instr_OF<1>
+    SLICE_X31Y49.X       Tilo                  0.643   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/writing<0>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_2
+    SLICE_X33Y49.F2      net (fanout=1)        0.442   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_2_1
+    SLICE_X33Y49.XB      Topxb                 1.285   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/opsel1_SPR_Select_2_2
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.OpSel1_SPR_Select_LUT_4
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1
+    SLICE_X38Y39.BX      net (fanout=32)       2.581   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Using_Breakable_Pipe.OpSel1_SPR_MUXCY_1/O
+    SLICE_X38Y39.X       Tbxx                  0.860   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/reg1<19>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Using_LUT4_1.Op1_MUXF5
+    SLICE_X39Y38.BY      net (fanout=1)        0.483   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/op1_I
+    SLICE_X39Y38.CLK     Tdick                 0.314   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/op1_i<20>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[19].Operand_Select_Bit_I/Op1_DFF
+    -------------------------------------------------  ---------------------------
+    Total                                     15.277ns (4.389ns logic, 10.888ns route)
+                                                       (28.7% logic, 71.3% route)
 
 --------------------------------------------------------------------------------
 
 Paths for end point mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1 (RAMB16_X1Y8.WEB2), 213 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     46.855ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     47.084ns (requirement - (data path - clock path skew + uncertainty))
   Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE (FF)
   Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1 (RAM)
   Requirement:          62.500ns
-  Data Path Delay:      15.526ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.119ns (0.408 - 0.527)
+  Data Path Delay:      15.317ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.099ns (0.408 - 0.507)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
@@ -332,181 +443,86 @@ Slack (setup path):     46.855ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y50.XQ      Tcko                  0.631   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+    SLICE_X29Y54.XQ      Tcko                  0.591   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE
-    SLICE_X27Y34.F1      net (fanout=33)       2.067   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
-    SLICE_X27Y34.COUT    Topcyf                1.195   mcs0/U0/iomodule_0/lmb_abus_Q<5>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[30].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[30].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y35.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y35.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
+    SLICE_X27Y38.F1      net (fanout=33)       2.303   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+    SLICE_X27Y38.COUT    Topcyf                1.195   mcs0/U0/iomodule_0/lmb_abus_Q<4>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y36.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y36.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
+    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
+    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
+    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
+    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
+    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
+    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
+    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
+    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
+    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
+    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
+    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y49.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
+    SLICE_X27Y50.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y50.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
+    SLICE_X27Y51.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y51.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y49.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
+    SLICE_X27Y52.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y52.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
-    SLICE_X22Y32.F3      net (fanout=8)        2.069   mcs0/U0/dlmb_M_ABus<0>
-    SLICE_X22Y32.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<0>
+    SLICE_X23Y30.F2      net (fanout=8)        1.823   mcs0/U0/dlmb_M_ABus<0>
+    SLICE_X23Y30.X       Tilo                  0.643   mcs0/U0/dlmb_port_BRAM_WEN<0>
                                                        mcs0/U0/dlmb_cntlr/lmb_we_0_and00001
-    RAMB16_X1Y8.WEB2     net (fanout=16)       4.936   mcs0/U0/dlmb_port_BRAM_WEN<0>
+    RAMB16_X1Y8.WEB2     net (fanout=16)       4.956   mcs0/U0/dlmb_port_BRAM_WEN<0>
     RAMB16_X1Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
                                                        mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
     -------------------------------------------------  ---------------------------
-    Total                                     15.526ns (6.454ns logic, 9.072ns route)
-                                                       (41.6% logic, 58.4% route)
+    Total                                     15.317ns (6.235ns logic, 9.082ns route)
+                                                       (40.7% logic, 59.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     46.859ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE (FF)
-  Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1 (RAM)
-  Requirement:          62.500ns
-  Data Path Delay:      15.522ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.119ns (0.408 - 0.527)
-  Source Clock:         Clk_BUFGP rising at 0.000ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE to mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X26Y50.XQ      Tcko                  0.631   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE
-    SLICE_X27Y34.G1      net (fanout=33)       2.080   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
-    SLICE_X27Y34.COUT    Topcyg                1.178   mcs0/U0/iomodule_0/lmb_abus_Q<5>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y35.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y35.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y36.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y36.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y49.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
-    SLICE_X22Y32.F3      net (fanout=8)        2.069   mcs0/U0/dlmb_M_ABus<0>
-    SLICE_X22Y32.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<0>
-                                                       mcs0/U0/dlmb_cntlr/lmb_we_0_and00001
-    RAMB16_X1Y8.WEB2     net (fanout=16)       4.936   mcs0/U0/dlmb_port_BRAM_WEN<0>
-    RAMB16_X1Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
-                                                       mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
-    -------------------------------------------------  ---------------------------
-    Total                                     15.522ns (6.437ns logic, 9.085ns route)
-                                                       (41.5% logic, 58.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     46.914ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     47.283ns (requirement - (data path - clock path skew + uncertainty))
   Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP1_FDRE (FF)
   Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1 (RAM)
   Requirement:          62.500ns
-  Data Path Delay:      15.402ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.184ns (0.408 - 0.592)
+  Data Path Delay:      15.022ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.195ns (0.547 - 0.742)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
@@ -515,92 +531,93 @@ Slack (setup path):     46.914ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y47.YQ      Tcko                  0.580   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_Intr_2nd_Phase<0>
+    SLICE_X22Y44.YQ      Tcko                  0.676   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_Intr_2nd_Phase<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP1_FDRE
-    SLICE_X27Y34.G3      net (fanout=32)       2.011   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<1>
-    SLICE_X27Y34.COUT    Topcyg                1.178   mcs0/U0/iomodule_0/lmb_abus_Q<5>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
+    SLICE_X27Y36.G3      net (fanout=32)       1.680   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<1>
+    SLICE_X27Y36.COUT    Topcyg                1.178   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/alu_Result<31>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[31].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[31].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
+    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[31].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<5>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[30].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y35.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y35.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y36.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y36.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
+    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
+    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
+    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
+    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
+    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
+    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
+    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
+    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
+    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
+    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
+    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y49.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
+    SLICE_X27Y50.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y50.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
+    SLICE_X27Y51.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y51.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y49.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
+    SLICE_X27Y52.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y52.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
-    SLICE_X22Y32.F3      net (fanout=8)        2.069   mcs0/U0/dlmb_M_ABus<0>
-    SLICE_X22Y32.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<0>
+    SLICE_X23Y30.F2      net (fanout=8)        1.823   mcs0/U0/dlmb_M_ABus<0>
+    SLICE_X23Y30.X       Tilo                  0.643   mcs0/U0/dlmb_port_BRAM_WEN<0>
                                                        mcs0/U0/dlmb_cntlr/lmb_we_0_and00001
-    RAMB16_X1Y8.WEB2     net (fanout=16)       4.936   mcs0/U0/dlmb_port_BRAM_WEN<0>
+    RAMB16_X1Y8.WEB2     net (fanout=16)       4.956   mcs0/U0/dlmb_port_BRAM_WEN<0>
     RAMB16_X1Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
                                                        mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
     -------------------------------------------------  ---------------------------
-    Total                                     15.402ns (6.386ns logic, 9.016ns route)
-                                                       (41.5% logic, 58.5% route)
+    Total                                     15.022ns (6.563ns logic, 8.459ns route)
+                                                       (43.7% logic, 56.3% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1 (RAMB16_X1Y8.WEB0), 213 paths
---------------------------------------------------------------------------------
-Slack (setup path):     46.880ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     47.317ns (requirement - (data path - clock path skew + uncertainty))
   Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE (FF)
   Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1 (RAM)
   Requirement:          62.500ns
-  Data Path Delay:      15.501ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.119ns (0.408 - 0.527)
+  Data Path Delay:      15.084ns (Levels of Logic = 17)
+  Clock Path Skew:      -0.099ns (0.408 - 0.507)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
@@ -609,332 +626,123 @@ Slack (setup path):     46.880ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X26Y50.XQ      Tcko                  0.631   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+    SLICE_X29Y54.XQ      Tcko                  0.591   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE
-    SLICE_X27Y34.F1      net (fanout=33)       2.067   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
-    SLICE_X27Y34.COUT    Topcyf                1.195   mcs0/U0/iomodule_0/lmb_abus_Q<5>
+    SLICE_X27Y37.F1      net (fanout=33)       1.940   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
+    SLICE_X27Y37.COUT    Topcyf                1.195   mcs0/U0/iomodule_0/lmb_abus_Q<5>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[30].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[30].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y35.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y35.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
+    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y36.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y36.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
+    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
+    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
+    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
+    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
+    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
+    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
+    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
+    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
+    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
+    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
+    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y49.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
+    SLICE_X27Y50.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y50.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
+    SLICE_X27Y51.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y51.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y49.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
+    SLICE_X27Y52.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
+    SLICE_X27Y52.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
-    SLICE_X22Y32.F3      net (fanout=8)        2.069   mcs0/U0/dlmb_M_ABus<0>
-    SLICE_X22Y32.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<0>
+    SLICE_X23Y30.F2      net (fanout=8)        1.823   mcs0/U0/dlmb_M_ABus<0>
+    SLICE_X23Y30.X       Tilo                  0.643   mcs0/U0/dlmb_port_BRAM_WEN<0>
                                                        mcs0/U0/dlmb_cntlr/lmb_we_0_and00001
-    RAMB16_X1Y8.WEB0     net (fanout=16)       4.911   mcs0/U0/dlmb_port_BRAM_WEN<0>
+    RAMB16_X1Y8.WEB2     net (fanout=16)       4.956   mcs0/U0/dlmb_port_BRAM_WEN<0>
     RAMB16_X1Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
                                                        mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
     -------------------------------------------------  ---------------------------
-    Total                                     15.501ns (6.454ns logic, 9.047ns route)
-                                                       (41.6% logic, 58.4% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     46.884ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE (FF)
-  Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1 (RAM)
-  Requirement:          62.500ns
-  Data Path Delay:      15.497ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.119ns (0.408 - 0.527)
-  Source Clock:         Clk_BUFGP rising at 0.000ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE to mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X26Y50.XQ      Tcko                  0.631   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP0_FDRE
-    SLICE_X27Y34.G1      net (fanout=33)       2.080   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<0>
-    SLICE_X27Y34.COUT    Topcyg                1.178   mcs0/U0/iomodule_0/lmb_abus_Q<5>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y35.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y35.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y36.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y36.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y49.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
-    SLICE_X22Y32.F3      net (fanout=8)        2.069   mcs0/U0/dlmb_M_ABus<0>
-    SLICE_X22Y32.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<0>
-                                                       mcs0/U0/dlmb_cntlr/lmb_we_0_and00001
-    RAMB16_X1Y8.WEB0     net (fanout=16)       4.911   mcs0/U0/dlmb_port_BRAM_WEN<0>
-    RAMB16_X1Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
-                                                       mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
-    -------------------------------------------------  ---------------------------
-    Total                                     15.497ns (6.437ns logic, 9.060ns route)
-                                                       (41.5% logic, 58.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     46.939ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP1_FDRE (FF)
-  Destination:          mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1 (RAM)
-  Requirement:          62.500ns
-  Data Path Delay:      15.377ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.184ns (0.408 - 0.592)
-  Source Clock:         Clk_BUFGP rising at 0.000ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP1_FDRE to mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X25Y47.YQ      Tcko                  0.580   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/take_Intr_2nd_Phase<0>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.ALU_OP1_FDRE
-    SLICE_X27Y34.G3      net (fanout=32)       2.011   mcs0/U0/microblaze_I/MicroBlaze_Core_I/alu_Op<1>
-    SLICE_X27Y34.COUT    Topcyg                1.178   mcs0/U0/iomodule_0/lmb_abus_Q<5>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.I_ALU_LUT
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y35.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[29].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y35.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<4>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[28].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y36.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[27].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y36.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<2>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[26].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y37.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[25].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y37.COUT    Tbyp                  0.130   mcs0/U0/iomodule_0/lmb_abus_Q<0>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[24].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y38.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[23].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y38.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<22>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[22].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y39.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[21].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y39.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<20>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[20].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y40.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[19].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y40.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<18>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[18].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y41.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[17].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y41.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<16>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[16].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y42.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[15].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y42.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<14>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[14].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y43.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[13].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y43.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<12>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[12].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y44.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[11].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y44.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<10>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y45.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[9].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y45.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<8>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[8].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y46.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[7].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y46.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<6>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[6].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y47.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[5].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y47.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<4>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[4].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y48.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[3].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y48.COUT    Tbyp                  0.130   mcs0/U0/dlmb_M_ABus<2>
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[2].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I
-    SLICE_X27Y49.CIN     net (fanout=1)        0.000   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[1].ALU_Bit_I1/Using_FPGA_LUT4.Not_Last_Bit.MUXCY_I/O
-    SLICE_X27Y49.Y       Tciny                 0.864   mcs0/U0/dlmb_cntlr/Sl_Rdy
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.Pre_MUXCY_I
-                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1/Using_FPGA_LUT4.Last_Bit.XOR_I
-    SLICE_X22Y32.F3      net (fanout=8)        2.069   mcs0/U0/dlmb_M_ABus<0>
-    SLICE_X22Y32.X       Tilo                  0.692   mcs0/U0/dlmb_port_BRAM_WEN<0>
-                                                       mcs0/U0/dlmb_cntlr/lmb_we_0_and00001
-    RAMB16_X1Y8.WEB0     net (fanout=16)       4.911   mcs0/U0/dlmb_port_BRAM_WEN<0>
-    RAMB16_X1Y8.CLKB     Trcck_WEB             1.252   mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
-                                                       mcs0/U0/lmb_bram_I/RAM_Inst/Using_B16_S2.The_BRAMs[3].RAMB16_S2_1
-    -------------------------------------------------  ---------------------------
-    Total                                     15.377ns (6.386ns logic, 8.991ns route)
-                                                       (41.5% logic, 58.5% route)
+    Total                                     15.084ns (6.365ns logic, 8.719ns route)
+                                                       (42.2% logic, 57.8% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_Clk = PERIOD TIMEGRP "TNM_Clk" 16 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_F (SLICE_X26Y25.BY), 1 path
+Paths for end point mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[24].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1 (SLICE_X36Y35.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.692ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               mcs0/U0/iomodule_0/write_data_5 (FF)
-  Destination:          mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_F (RAM)
+Slack (hold path):      0.654ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[24].PC_Bit_I/Set_DFF.PC_IF_DFF (FF)
+  Destination:          mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[24].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.733ns (Levels of Logic = 1)
-  Clock Path Skew:      0.041ns (0.278 - 0.237)
+  Data Path Delay:      0.707ns (Levels of Logic = 1)
+  Clock Path Skew:      0.053ns (0.317 - 0.264)
   Source Clock:         Clk_BUFGP rising at 62.500ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: mcs0/U0/iomodule_0/write_data_5 to mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_F
+  Minimum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[24].PC_Bit_I/Set_DFF.PC_IF_DFF to mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[24].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X29Y24.YQ      Tcko                  0.464   mcs0/U0/iomodule_0/write_data<13>
-                                                       mcs0/U0/iomodule_0/write_data_5
-    SLICE_X26Y25.BY      net (fanout=5)        0.395   mcs0/U0/iomodule_0/write_data<5>
-    SLICE_X26Y25.CLK     Tdh         (-Th)     0.126   mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/intr_addr_i<3>
-                                                       mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_F
+    SLICE_X39Y33.YQ      Tcko                  0.464   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[24].PC_Bit_I/pc_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[24].PC_Bit_I/Set_DFF.PC_IF_DFF
+    SLICE_X36Y35.BX      net (fanout=2)        0.389   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[24].PC_Bit_I/pc_I
+    SLICE_X36Y35.CLK     Tdh         (-Th)     0.146   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/pc_OF_I<24>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[24].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1
     -------------------------------------------------  ---------------------------
-    Total                                      0.733ns (0.338ns logic, 0.395ns route)
-                                                       (46.1% logic, 53.9% route)
+    Total                                      0.707ns (0.318ns logic, 0.389ns route)
+                                                       (45.0% logic, 55.0% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_G (SLICE_X26Y25.BY), 1 path
+Paths for end point mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1 (SLICE_X34Y35.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.692ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               mcs0/U0/iomodule_0/write_data_5 (FF)
-  Destination:          mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_G (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.733ns (Levels of Logic = 1)
-  Clock Path Skew:      0.041ns (0.278 - 0.237)
-  Source Clock:         Clk_BUFGP rising at 62.500ns
-  Destination Clock:    Clk_BUFGP rising at 62.500ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: mcs0/U0/iomodule_0/write_data_5 to mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_G
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X29Y24.YQ      Tcko                  0.464   mcs0/U0/iomodule_0/write_data<13>
-                                                       mcs0/U0/iomodule_0/write_data_5
-    SLICE_X26Y25.BY      net (fanout=5)        0.395   mcs0/U0/iomodule_0/write_data<5>
-    SLICE_X26Y25.CLK     Tdh         (-Th)     0.126   mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/intr_addr_i<3>
-                                                       mcs0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/Mram_civar4.SLICEM_G
-    -------------------------------------------------  ---------------------------
-    Total                                      0.733ns (0.338ns logic, 0.395ns route)
-                                                       (46.1% logic, 53.9% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1 (SLICE_X32Y32.BX), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.734ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.682ns (requirement - (clock path skew + uncertainty - data path))
   Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/Set_DFF.PC_IF_DFF (FF)
   Destination:          mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.773ns (Levels of Logic = 1)
-  Clock Path Skew:      0.039ns (0.348 - 0.309)
+  Data Path Delay:      0.694ns (Levels of Logic = 1)
+  Clock Path Skew:      0.012ns (0.078 - 0.066)
   Source Clock:         Clk_BUFGP rising at 62.500ns
   Destination Clock:    Clk_BUFGP rising at 62.500ns
   Clock Uncertainty:    0.000ns
@@ -943,14 +751,41 @@ Slack (hold path):      0.734ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X30Y32.YQ      Tcko                  0.541   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/pc_I
+    SLICE_X35Y34.YQ      Tcko                  0.464   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/pc_I
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/Set_DFF.PC_IF_DFF
-    SLICE_X32Y32.BX      net (fanout=2)        0.378   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/pc_I
-    SLICE_X32Y32.CLK     Tdh         (-Th)     0.146   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/pc_OF_I<28>
+    SLICE_X34Y35.BX      net (fanout=2)        0.376   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/pc_I
+    SLICE_X34Y35.CLK     Tdh         (-Th)     0.146   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/pc_OF_I<28>
                                                        mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[28].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1
     -------------------------------------------------  ---------------------------
-    Total                                      0.773ns (0.395ns logic, 0.378ns route)
-                                                       (51.1% logic, 48.9% route)
+    Total                                      0.694ns (0.318ns logic, 0.376ns route)
+                                                       (45.8% logic, 54.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[26].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1 (SLICE_X34Y32.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.702ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[26].PC_Bit_I/Set_DFF.PC_IF_DFF (FF)
+  Destination:          mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[26].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.767ns (Levels of Logic = 1)
+  Clock Path Skew:      0.065ns (0.309 - 0.244)
+  Source Clock:         Clk_BUFGP rising at 62.500ns
+  Destination Clock:    Clk_BUFGP rising at 62.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[26].PC_Bit_I/Set_DFF.PC_IF_DFF to mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[26].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y30.YQ      Tcko                  0.541   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[26].PC_Bit_I/pc_I
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[26].PC_Bit_I/Set_DFF.PC_IF_DFF
+    SLICE_X34Y32.BX      net (fanout=2)        0.372   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[26].PC_Bit_I/pc_I
+    SLICE_X34Y32.CLK     Tdh         (-Th)     0.146   mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/pc_OF_I<26>
+                                                       mcs0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.Not_All_Bits.PC_GEN[26].PC_Bit_I/PC_OF_Buffer/Use_unisim.MB_SRL16E_I1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.767ns (0.395ns logic, 0.372ns route)
+                                                       (51.5% logic, 48.5% route)
 
 --------------------------------------------------------------------------------
 
@@ -994,7 +829,7 @@ Clock to Setup on destination clock Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |   15.816|         |         |         |
+Clk            |   15.460|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -1003,16 +838,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 175619 paths, 0 nets, and 7697 connections
+Constraints cover 238363 paths, 0 nets, and 7684 connections
 
 Design statistics:
-   Minimum period:  15.816ns{1}   (Maximum frequency:  63.227MHz)
+   Minimum period:  15.460ns{1}   (Maximum frequency:  64.683MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sun Oct 06 20:39:36 2013 
+Analysis completed Sun Oct 06 21:11:57 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.38 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.38 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -21,20 +21,17 @@ Compiling vhdl file "C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/adder32.vhd" in
 Architecture arch_adder32 of Entity adder32 is up to date.
 Compiling vhdl file "C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd" in Library work.
 Entity <alu> compiled.
-ERROR:HDLParsers:864 - "C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd" Line 77. Actual, result of operator, associated with Formal Signal, Signal 'operand2', is not a Signal. (LRM 2.1.1)
-ERROR:HDLParsers:3298 - "C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd" line 77. Expression is not a static name.
-ERROR:HDLParsers:864 - "C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd" Line 79. Actual, result of operator, associated with Formal Signal, Signal 'operand2', is not a Signal. (LRM 2.1.1)
-ERROR:HDLParsers:3298 - "C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd" line 79. Expression is not a static name.
+Entity <alu> (Architecture <arch_alu>) compiled.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.56 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> 
 
-Total memory usage is 197676 kilobytes
+Total memory usage is 198060 kilobytes
 
-Number of errors   :    4 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

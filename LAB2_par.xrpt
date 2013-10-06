@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Sun Oct 06 20:39:11 2013">
+  <application stringID="par" timeStamp="Sun Oct 06 21:11:32 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -89,8 +89,8 @@
             <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y10"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="656.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.184000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.154000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.177000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.150000"/>
           </row>
         </table>
       </section>
