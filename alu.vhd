@@ -199,15 +199,15 @@ begin
 		
 		--or
 		elsif (Control = "001100") then
-		Result1 <=result_and;
+		Result1 <=result_or;
 		
 		--xor
 		elsif (Control = "001101") then
-		Result1 <=result_and;
+		Result1 <=result_xor;
 		
 		--nor
 		elsif (Control = "001110") then
-		Result1 <=result_and;
+		Result1 <=result_nor;
 		
       else 
 		 Result1 <= operand1;
