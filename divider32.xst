@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Poornima/Documents/GitHub/cg3207/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Poornima/Documents/GitHub/cg3207/xst"
+elaborate
+-ifn divider32.prj
+-ifmt mixed

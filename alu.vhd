@@ -41,8 +41,6 @@ Port (	Clk			: in	STD_LOGIC;
 		Debug		: out	STD_LOGIC_VECTOR (31 downto 0));
 end alu;
 
-
-
 architecture arch_alu of alu is
 
 component adder32 is
@@ -50,6 +48,34 @@ component adder32 is
            operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
            result : out  STD_LOGIC_VECTOR (31 downto 0);
            debug : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
+component and32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
+component or32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
+component xor32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
+component nor32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
            clk : in  STD_LOGIC);
 end component;
 
@@ -61,11 +87,18 @@ component multiplier32 is
            clk : in  STD_LOGIC);
 end component;
 
+component divider32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           result2 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
 Signal temp_result_adder : std_logic_vector(31 downto 0);
 Signal temp_result_subtractor : std_logic_vector(31 downto 0);
 Signal temp_debug_adder : std_logic_vector(31 downto 0);
 Signal temp_debug_subtractor : std_logic_vector(31 downto 0);
-
 Signal temp_result_unsignedadder : std_logic_vector(31 downto 0);
 Signal temp_result_unsignedsubtractor : std_logic_vector(31 downto 0);
 Signal temp_debug_unsignedadder : std_logic_vector(31 downto 0);
@@ -74,7 +107,14 @@ Signal temp_result1_multiplier : std_logic_vector(31 downto 0);
 Signal temp_result2_multiplier : std_logic_vector(31 downto 0);
 Signal temp_result1_unsignedmultiplier : std_logic_vector(31 downto 0);
 Signal temp_result2_unsignedmultiplier : std_logic_vector(31 downto 0);
-
+Signal temp_result1_divider : std_logic_vector(31 downto 0);
+Signal temp_result2_divider : std_logic_vector(31 downto 0);
+Signal temp_result1_unsigneddivider : std_logic_vector(31 downto 0);
+Signal temp_result2_unsigneddivider : std_logic_vector(31 downto 0);
+Signal result_and : std_logic_vector(31 downto 0);
+Signal result_or : std_logic_vector(31 downto 0);
+Signal result_xor : std_logic_vector(31 downto 0);
+Signal result_nor : std_logic_vector(31 downto 0);
 
 Signal final_Operand1: std_logic_vector(31 downto 0);
 Signal final_Operand2: std_logic_vector(31 downto 0);
@@ -92,6 +132,10 @@ final_Operand2 <= not operand2 + 1 when operand2(31)='1' else
 final_operand3 <= not final_operand2 +1;
 operand3 <= not operand2 +1;
 
+and_32: and32 port map(Operand1 ,Operand2 , result_and, clk);
+or_32:  or32 port map(Operand1 ,Operand2 , result_or, clk);
+xor_32: xor32 port map(Operand1 ,Operand2 , result_xor, clk);
+nor_32: nor32 port map(Operand1 ,Operand2 , result_or, clk);
 					
 adder : adder32 port map( Operand1 ,Operand2 , temp_result_adder,temp_debug_adder,clk);
 subtractor : adder32 port map( Operand1 ,operand3 , temp_result_subtractor,temp_debug_subtractor,clk);
@@ -99,6 +143,8 @@ adder_u : adder32 port map( final_Operand1 ,final_Operand2 , temp_result_unsigne
 subtractor_u : adder32 port map( final_Operand1 , final_operand3, temp_result_unsignedsubtractor,temp_debug_unsignedsubtractor,clk);
 multiplier: multiplier32 port map( Operand1 ,Operand2 , temp_result1_multiplier,temp_result2_multiplier,clk);
 multiplier_u: multiplier32 port map( final_Operand1 ,final_Operand2 , temp_result1_unsignedmultiplier,temp_result2_unsignedmultiplier,clk);
+divider: divider32 port map( Operand1 ,Operand2 , temp_result1_divider,temp_result2_divider,clk);
+divider_u: divider32 port map( final_Operand1 ,final_Operand2 , temp_result1_unsigneddivider,temp_result2_unsigneddivider,clk);
 process (Clk)
 begin  
    if (Clk'event and Clk = '1') then
@@ -131,8 +177,39 @@ begin
 		Result1 <=temp_result1_unsignedmultiplier;
 		Result2 <=temp_result2_unsignedmultiplier;
 		
-      else
-       
+		elsif (Control = "000111") then
+		Result1 <=temp_result1_multiplier;
+		Result2 <=temp_result2_multiplier;
+		
+		elsif (Control = "001000") then
+		Result1 <=temp_result1_unsignedmultiplier;
+		Result2 <=temp_result2_unsignedmultiplier;
+		
+		elsif (Control = "001001") then
+		Result1 <=temp_result1_divider;
+		Result2 <=temp_result2_divider;
+		
+		elsif (Control = "001010") then
+		Result1 <=temp_result1_unsigneddivider;
+		Result2 <=temp_result2_unsigneddivider;
+		
+		--and
+		elsif (Control = "001011") then
+		Result1 <=result_and;
+		
+		--or
+		elsif (Control = "001100") then
+		Result1 <=result_and;
+		
+		--xor
+		elsif (Control = "001101") then
+		Result1 <=result_and;
+		
+		--nor
+		elsif (Control = "001110") then
+		Result1 <=result_and;
+		
+      else 
 		 Result1 <= operand1;
 		 Result2 <= operand2;
 		 Debug   <= (Control(1) & Control(0) & Control & Control & Control & Control & Control);
