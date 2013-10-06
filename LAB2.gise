@@ -127,7 +127,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="LAB2.lso"/>
@@ -151,6 +153,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LAB2.bld"/>
       <outfile xil_pn:name="LAB2.ngd"/>
       <outfile xil_pn:name="LAB2_ngdbuild.xrpt"/>
@@ -161,6 +164,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="LAB2.pcf"/>
       <outfile xil_pn:name="LAB2_map.map"/>
       <outfile xil_pn:name="LAB2_map.mrp"/>
@@ -174,6 +180,7 @@
     <transform xil_pn:end_ts="1381078588" xil_pn:in_ck="6462989093131519726" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="3373904778572030817" xil_pn:start_ts="1381078503">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LAB2.ncd"/>
       <outfile xil_pn:name="LAB2.pad"/>
       <outfile xil_pn:name="LAB2.par"/>
@@ -189,6 +196,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LAB2.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="lab2.bgn"/>
@@ -201,6 +209,7 @@
     <transform xil_pn:end_ts="1381078588" xil_pn:in_ck="4906817416278367185" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1381078578">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LAB2.twr"/>
       <outfile xil_pn:name="LAB2.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
@@ -209,6 +218,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
