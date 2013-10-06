@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/user/Dropbox/Sem7/CG3207/LAB2/LAB2/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/user/Dropbox/Sem7/CG3207/LAB2/LAB2/xst"
+elaborate
+-ifn adder32.prj
+-ifmt mixed
