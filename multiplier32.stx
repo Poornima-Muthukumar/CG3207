@@ -17,21 +17,17 @@ Total CPU time to Xst completion: 0.09 secs
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd" in Library work.
-Architecture arch_adder32 of Entity adder32 is up to date.
 Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd" in Library work.
-Architecture arch_multiplier32 of Entity multiplier32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/alu.vhd" in Library work.
-Entity <alu> compiled.
-Entity <alu> (Architecture <arch_alu>) compiled.
+Entity <multiplier32> compiled.
+Entity <multiplier32> (Architecture <arch_multiplier32>) compiled.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> 
 
-Total memory usage is 198700 kilobytes
+Total memory usage is 198060 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

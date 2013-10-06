@@ -53,6 +53,14 @@ component adder32 is
            clk : in  STD_LOGIC);
 end component;
 
+component multiplier32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           result2 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
 Signal temp_result_adder : std_logic_vector(31 downto 0);
 Signal temp_result_subtractor : std_logic_vector(31 downto 0);
 Signal temp_debug_adder : std_logic_vector(31 downto 0);
@@ -62,6 +70,11 @@ Signal temp_result_unsignedadder : std_logic_vector(31 downto 0);
 Signal temp_result_unsignedsubtractor : std_logic_vector(31 downto 0);
 Signal temp_debug_unsignedadder : std_logic_vector(31 downto 0);
 Signal temp_debug_unsignedsubtractor : std_logic_vector(31 downto 0);
+Signal temp_result1_multiplier : std_logic_vector(31 downto 0);
+Signal temp_result2_multiplier : std_logic_vector(31 downto 0);
+Signal temp_result1_unsignedmultiplier : std_logic_vector(31 downto 0);
+Signal temp_result2_unsignedmultiplier : std_logic_vector(31 downto 0);
+
 
 Signal final_Operand1: std_logic_vector(31 downto 0);
 Signal final_Operand2: std_logic_vector(31 downto 0);
@@ -84,7 +97,8 @@ adder : adder32 port map( Operand1 ,Operand2 , temp_result_adder,temp_debug_adde
 subtractor : adder32 port map( Operand1 ,operand3 , temp_result_subtractor,temp_debug_subtractor,clk);
 adder_u : adder32 port map( final_Operand1 ,final_Operand2 , temp_result_unsignedadder,temp_debug_unsignedadder,clk);
 subtractor_u : adder32 port map( final_Operand1 , final_operand3, temp_result_unsignedsubtractor,temp_debug_unsignedsubtractor,clk);
-
+multiplier: multiplier32 port map( Operand1 ,Operand2 , temp_result1_multiplier,temp_result2_multiplier,clk);
+multiplier_u: multiplier32 port map( final_Operand1 ,final_Operand2 , temp_result1_unsignedmultiplier,temp_result2_unsignedmultiplier,clk);
 process (Clk)
 begin  
    if (Clk'event and Clk = '1') then
@@ -109,10 +123,18 @@ begin
 		Result1 <=temp_result_unsignedsubtractor;
 		Debug <= temp_debug_unsignedsubtractor;
 		
+		elsif (Control = "000101") then
+		Result1 <=temp_result1_multiplier;
+		Result2 <=temp_result2_multiplier;
+		
+		elsif (Control = "000110") then
+		Result1 <=temp_result1_unsignedmultiplier;
+		Result2 <=temp_result2_unsignedmultiplier;
+		
       else
        
-		 Result1 <= Operand1;
-		 Result2 <= Operand2;
+		 Result1 <= operand1;
+		 Result2 <= operand2;
 		 Debug   <= (Control(1) & Control(0) & Control & Control & Control & Control & Control);
       end if;
    end if;

@@ -1,6 +1,8 @@
-AR adder32 arch_adder32 C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/adder32.vhd sub00/vhpl01 1381065061
-EN lab2 NULL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/LAB2.vhd sub00/vhpl04 1381065064
-AR alu arch_alu C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd sub00/vhpl03 1381065063
-EN adder32 NULL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/adder32.vhd sub00/vhpl00 1381065060
-AR lab2 structural C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/LAB2.vhd sub00/vhpl05 1381065065
-EN alu NULL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd sub00/vhpl02 1381065062
+AR multiplier32 arch_multiplier32 C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd sub00/vhpl07 1381071278
+EN multiplier32 NULL C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd sub00/vhpl06 1381071277
+AR adder32 arch_adder32 C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd sub00/vhpl01 1381071276
+EN lab2 NULL C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd sub00/vhpl04 1381070966
+AR alu arch_alu C:/Users/Poornima/Documents/GitHub/cg3207/alu.vhd sub00/vhpl03 1381071280
+EN adder32 NULL C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd sub00/vhpl00 1381071275
+AR lab2 structural C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd sub00/vhpl05 1381070967
+EN alu NULL C:/Users/Poornima/Documents/GitHub/cg3207/alu.vhd sub00/vhpl02 1381071279

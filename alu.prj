@@ -1,2 +1,3 @@
+vhdl work "multiplier.vhd"
 vhdl work "adder32.vhd"
 vhdl work "alu.vhd"

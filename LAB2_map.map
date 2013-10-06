@@ -9,7 +9,7 @@ Target Device  : xc3s400a
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Sun Oct 06 21:11:23 2013
+Mapped Date    : Sun Oct 06 22:49:45 2013
 
 Mapping design into LUTs...
 Running directed packing...
@@ -344,16 +344,16 @@ Design Summary:
 Number of errors:      0
 Number of warnings:   48
 Logic Utilization:
-  Number of Slice Flip Flops:           714 out of   7,168    9%
-  Number of 4 input LUTs:             1,499 out of   7,168   20%
+  Number of Slice Flip Flops:           804 out of   7,168   11%
+  Number of 4 input LUTs:             1,723 out of   7,168   24%
 Logic Distribution:
-  Number of occupied Slices:            978 out of   3,584   27%
-    Number of Slices containing only related logic:     978 out of     978 100%
-    Number of Slices containing unrelated logic:          0 out of     978   0%
+  Number of occupied Slices:          1,092 out of   3,584   30%
+    Number of Slices containing only related logic:   1,092 out of   1,092 100%
+    Number of Slices containing unrelated logic:          0 out of   1,092   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,533 out of   7,168   21%
-    Number used as logic:             1,167
-    Number used as a route-thru:         34
+  Total Number of 4 input LUTs:       1,772 out of   7,168   24%
+    Number used as logic:             1,391
+    Number used as a route-thru:         49
     Number used for Dual Port RAMs:     282
       (Two LUTs used per Dual Port RAM)
     Number used as Shift registers:      50
@@ -363,11 +363,12 @@ Logic Distribution:
 
   Number of bonded IOBs:                 11 out of     195    5%
   Number of BUFGMUXs:                     1 out of      24    4%
+  Number of MULT18X18SIOs:                4 out of      20   20%
   Number of RAMB16BWEs:                  16 out of      20   80%
 
-Average Fanout of Non-Clock Nets:                3.69
+Average Fanout of Non-Clock Nets:                3.35
 
-Peak Memory Usage:  272 MB
+Peak Memory Usage:  276 MB
 Total REAL time to MAP completion:  5 secs 
 Total CPU time to MAP completion:   4 secs 
 

@@ -17,10 +17,9 @@
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -31,30 +30,29 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity adder32 is
+entity multiplier32 is
     Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
            operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
-           result : out  STD_LOGIC_VECTOR (31 downto 0);
-           debug : out  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           result2 : out  STD_LOGIC_VECTOR (31 downto 0);
            clk : in  STD_LOGIC);
-end adder32;
+end multiplier32;
 
-architecture arch_adder32 of adder32 is
+architecture arch_multiplier32 of multiplier32 is
 
-signal sum: std_logic_vector (32 downto 0):= "000000000000000000000000000000000";
+signal mult_result: std_logic_vector (63 downto 0):= (others=>'0');
 
 begin
 process(clk)
 
-
 begin
 if (clk'event and clk='1') then
 
-sum <= operand1 + operand2;
+mult_result <= operand1 * operand2;
 
 end if;
 
-result <= sum (31 downto 0);
-debug <= "0000000000000000000000000000000" & sum(32);
+result1 <= mult_result (31 downto 0);
+result2 <= mult_result (63 downto 32);
 end process;
-end arch_adder32;
+end arch_multiplier32;
