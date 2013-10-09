@@ -95,6 +95,48 @@ component divider32 is
            clk : in  STD_LOGIC);
 end component;
 
+component slt32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
+component beq32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
+component bne32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
+component sll32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
+component srl32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
+component sra32 is
+    Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
+           operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
+           result1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC);
+end component;
+
 Signal temp_result_adder : std_logic_vector(31 downto 0);
 Signal temp_result_subtractor : std_logic_vector(31 downto 0);
 Signal temp_debug_adder : std_logic_vector(31 downto 0);
@@ -115,6 +157,12 @@ Signal result_and : std_logic_vector(31 downto 0);
 Signal result_or : std_logic_vector(31 downto 0);
 Signal result_xor : std_logic_vector(31 downto 0);
 Signal result_nor : std_logic_vector(31 downto 0);
+Signal result_slt : std_logic_vector(31 downto 0);
+Signal result_beq : std_logic_vector(31 downto 0);
+Signal result_bne : std_logic_vector(31 downto 0);
+Signal result_sll : std_logic_vector(31 downto 0);
+Signal result_srl : std_logic_vector(31 downto 0);
+Signal result_sra : std_logic_vector(31 downto 0);
 
 Signal final_Operand1: std_logic_vector(31 downto 0);
 Signal final_Operand2: std_logic_vector(31 downto 0);
@@ -135,8 +183,16 @@ operand3 <= not operand2 +1;
 and_32: and32 port map(Operand1 ,Operand2 , result_and, clk);
 or_32:  or32 port map(Operand1 ,Operand2 , result_or, clk);
 xor_32: xor32 port map(Operand1 ,Operand2 , result_xor, clk);
-nor_32: nor32 port map(Operand1 ,Operand2 , result_or, clk);
-					
+nor_32: nor32 port map(Operand1 ,Operand2 , result_nor, clk);
+
+slt : slt32 port map( Operand1 ,Operand2 , result_slt,clk);
+beq : beq32 port map( Operand1 ,Operand2 , result_beq,clk);
+bne : bne32 port map( Operand1 ,Operand2 , result_bne,clk);
+
+shiftleft : sll32 port map( Operand1 ,Operand2 , result_sll,clk);
+shiftright : srl32 port map( Operand1 ,Operand2 , result_srl,clk);
+shiftarithmetic : sra32 port map ( Operand1 ,Operand2 , result_sra,clk);
+
 adder : adder32 port map( Operand1 ,Operand2 , temp_result_adder,temp_debug_adder,clk);
 subtractor : adder32 port map( Operand1 ,operand3 , temp_result_subtractor,temp_debug_subtractor,clk);
 adder_u : adder32 port map( final_Operand1 ,final_Operand2 , temp_result_unsignedadder,temp_debug_unsignedadder,clk);
@@ -145,7 +201,9 @@ multiplier: multiplier32 port map( Operand1 ,Operand2 , temp_result1_multiplier,
 multiplier_u: multiplier32 port map( final_Operand1 ,final_Operand2 , temp_result1_unsignedmultiplier,temp_result2_unsignedmultiplier,clk);
 divider: divider32 port map( Operand1 ,Operand2 , temp_result1_divider,temp_result2_divider,clk);
 divider_u: divider32 port map( final_Operand1 ,final_Operand2 , temp_result1_unsigneddivider,temp_result2_unsigneddivider,clk);
+
 process (Clk)
+
 begin  
    if (Clk'event and Clk = '1') then
       if Control(5) = '1' then
@@ -208,6 +266,18 @@ begin
 		--nor
 		elsif (Control = "001110") then
 		Result1 <=result_nor;
+		
+		--slt
+		elsif (Control = "001111") then
+		Result1 <=result_slt;
+		
+		--beq
+		elsif (Control = "010000") then
+		Result1 <=result_beq;
+		
+		--bne
+		elsif (Control = "010001") then
+		Result1 <=result_bne;
 		
       else 
 		 Result1 <= operand1;

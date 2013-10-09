@@ -1,40 +1,51 @@
 Release 13.2 - xst O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to C:/Users/Poornima/Documents/GitHub/cg3207/xst/projnav.tmp
+--> Parameter TMPDIR set to C:/Users/user/Documents/GitHub/cg3207/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/user/Documents/GitHub/cg3207/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.08 secs
- 
---> Parameter xsthdpdir set to C:/Users/Poornima/Documents/GitHub/cg3207/xst
-
-
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd" in Library work.
-Architecture arch_adder32 of Entity adder32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd" in Library work.
-Architecture arch_multiplier32 of Entity multiplier32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/divider.vhd" in Library work.
-Architecture arch_divider32 of Entity divider32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/alu.vhd" in Library work.
-Architecture arch_alu of Entity alu is up to date.
+WARNING:HDLParsers:3607 - Unit work/slt32 is now defined in a different file.  It was defined in "C:/Users/user/Documents/GitHub/cg3207/and32.vhd", and is now defined in "C:/Users/user/Documents/GitHub/cg3207/slt32.vhd".
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/slt32.vhd" in Library work.
+Architecture arch_and32 of Entity and32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/or32.vhd" in Library work.
+Architecture arch_or32 of Entity or32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/xor32.vhd" in Library work.
+Architecture arch_xor32 of Entity xor32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/nor32.vhd" in Library work.
+Architecture arch_nor32 of Entity nor32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/beq32.vhd" in Library work.
+Architecture arch_beq32 of Entity beq32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/bne32.vhd" in Library work.
+Architecture arch_bne32 of Entity bne32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/sll32.vhd" in Library work.
+Architecture arch_sll32 of Entity sll32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/srl32.vhd" in Library work.
+Architecture arch_srl32 of Entity srl32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/sra32.vhd" in Library work.
+ERROR:HDLParsers:808 - "C:/Users/user/Documents/GitHub/cg3207/sra32.vhd" Line 48. sra can not have such operands in this context.
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> 
 
-Total memory usage is 198572 kilobytes
+Total memory usage is 200404 kilobytes
 
-Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
   <DateModified>2013-10-09T22:54:11</DateModified>
+=======
+  <DateModified>2013-10-09T14:34:29</DateModified>
+>>>>>>> 2a698d10510a5df6f7a59b568bb77aa914d17f2d
   <ModuleName>LAB2</ModuleName>
   <SummaryTimeStamp>2013-10-02T10:49:13</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Poornima/Documents/GitHub/cg3207/iseconfig/LAB2.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Poornima/Documents/GitHub/cg3207\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/user/Documents/GitHub/cg3207/iseconfig/LAB2.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/user/Documents/GitHub/cg3207\</ImplementationReportsDirectory>
   <DateInitialized>2013-09-18T15:44:18</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

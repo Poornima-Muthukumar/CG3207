@@ -1,27 +1,13 @@
-V3 45
+V3 78
 FL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/adder32.vhd 2013/10/06.20:38:39 O.61xd
 FL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/alu.vhd 2013/10/06.21:10:41 O.61xd
 FL C:/Users/Poornima/Desktop/CG3207/Lab-2/LAB2/LAB2.vhd 2013/09/18.05:30:56 O.61xd
 FL C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd 2013/10/06.22:20:04 O.61xd
-EN work/adder32 1381078418 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd \
-      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
-      PB ieee/STD_LOGIC_UNSIGNED 1308643379
-AR work/adder32/arch_adder32 1381078419 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd EN work/adder32 1381078418
 FL C:/Users/Poornima/Documents/GitHub/cg3207/alu.vhd 2013/10/07.00:53:19 O.61xd
-EN work/alu 1381078424 FL C:/Users/Poornima/Documents/GitHub/cg3207/alu.vhd \
-      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
-      PB ieee/STD_LOGIC_UNSIGNED 1308643379
-AR work/alu/arch_alu 1381078425 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/alu.vhd EN work/alu 1381078424 \
-      CP and32 CP or32 CP xor32 CP nor32 CP adder32 CP multiplier32 CP divider32
 FL C:/Users/Poornima/Documents/GitHub/cg3207/and32.vhd 2013/10/07.00:49:14 O.61xd
 EN work/and32 1381078410 FL C:/Users/Poornima/Documents/GitHub/cg3207/and32.vhd \
       PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
       PB ieee/STD_LOGIC_UNSIGNED 1308643379
-AR work/and32/arch_and32 1381078411 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/and32.vhd EN work/and32 1381078410
 FL C:/Users/Poornima/Documents/GitHub/cg3207/and_32.vhd 2013/10/07.00:47:39 O.61xd
 EN work/and_32 1381078062 FL C:/Users/Poornima/Documents/GitHub/cg3207/and_32.vhd \
       PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
@@ -29,44 +15,102 @@ EN work/and_32 1381078062 FL C:/Users/Poornima/Documents/GitHub/cg3207/and_32.vh
 AR work/and_32/arch_and_32 1381078063 \
       FL C:/Users/Poornima/Documents/GitHub/cg3207/and_32.vhd EN work/and_32 1381078062
 FL C:/Users/Poornima/Documents/GitHub/cg3207/divider.vhd 2013/10/07.00:52:24 O.61xd
-EN work/divider32 1381078422 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/divider.vhd \
+FL C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd 2013/09/18.05:30:56 O.61xd
+FL C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd 2013/10/06.22:40:07 O.61xd
+FL C:/Users/Poornima/Documents/GitHub/cg3207/nor32.vhd 2013/10/07.00:52:28 O.61xd
+FL C:/Users/Poornima/Documents/GitHub/cg3207/or32.vhd 2013/10/07.00:50:58 O.61xd
+FL C:/Users/Poornima/Documents/GitHub/cg3207/xor32.vhd 2013/10/07.00:52:00 O.61xd
+FL C:/Users/user/Documents/GitHub/cg3207/adder32.vhd 2013/10/09.09:58:20 O.61xd
+EN work/adder32 1381326683 FL C:/Users/user/Documents/GitHub/cg3207/adder32.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/adder32/arch_adder32 1381326684 \
+      FL C:/Users/user/Documents/GitHub/cg3207/adder32.vhd EN work/adder32 1381326683
+FL C:/Users/user/Documents/GitHub/cg3207/alu.vhd 2013/10/09.21:49:33 O.61xd
+EN work/alu 1381326689 FL C:/Users/user/Documents/GitHub/cg3207/alu.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/alu/arch_alu 1381326690 \
+      FL C:/Users/user/Documents/GitHub/cg3207/alu.vhd EN work/alu 1381326689 \
+      CP and32 CP or32 CP xor32 CP nor32 CP slt32 CP beq32 CP bne32 CP sll32 CP srl32 \
+      CP sra32 CP adder32 CP multiplier32 CP divider32
+FL C:/Users/user/Documents/GitHub/cg3207/and32.vhd 2013/10/09.11:33:46 O.61xd
+AR work/slt32/arch_slt32 -1 FL C:/Users/user/Documents/GitHub/cg3207/and32.vhd \
+      EN work/slt32 1381326877
+FL C:/Users/user/Documents/GitHub/cg3207/beq32.vhd 2013/10/09.11:36:32 O.61xd
+EN work/beq32 1381326885 FL C:/Users/user/Documents/GitHub/cg3207/beq32.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/beq32/arch_beq32 1381326886 \
+      FL C:/Users/user/Documents/GitHub/cg3207/beq32.vhd EN work/beq32 1381326885
+FL C:/Users/user/Documents/GitHub/cg3207/bne32.vhd 2013/10/09.11:46:13 O.61xd
+EN work/bne32 1381326887 FL C:/Users/user/Documents/GitHub/cg3207/bne32.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/bne32/arch_bne32 1381326888 \
+      FL C:/Users/user/Documents/GitHub/cg3207/bne32.vhd EN work/bne32 1381326887
+FL C:/Users/user/Documents/GitHub/cg3207/divider.vhd 2013/10/09.09:58:20 O.61xd
+EN work/divider32 1381326687 FL C:/Users/user/Documents/GitHub/cg3207/divider.vhd \
       PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
       PB ieee/STD_LOGIC_UNSIGNED 1308643379 PB ieee/NUMERIC_STD 1308643378
-AR work/divider32/arch_divider32 1381078423 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/divider.vhd EN work/divider32 1381078422
-FL C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd 2013/09/18.05:30:56 O.61xd
-EN work/LAB2 1381078426 FL C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd \
+AR work/divider32/arch_divider32 1381326688 \
+      FL C:/Users/user/Documents/GitHub/cg3207/divider.vhd EN work/divider32 1381326687
+FL C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd 2013/10/06.20:58:07 O.61xd
+EN work/LAB2 1381326361 FL C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd \
       PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
       PB ieee/STD_LOGIC_UNSIGNED 1308643379
-AR work/LAB2/Structural 1381078427 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd EN work/LAB2 1381078426 \
+AR work/LAB2/Structural 1381326362 \
+      FL C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd EN work/LAB2 1381326361 \
       CP mcs CP alu
-FL C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd 2013/10/06.22:40:07 O.61xd
-EN work/multiplier32 1381078420 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd \
+FL C:/Users/user/Documents/GitHub/cg3207/multiplier.vhd 2013/10/09.09:58:20 O.61xd
+EN work/multiplier32 1381326685 \
+      FL C:/Users/user/Documents/GitHub/cg3207/multiplier.vhd \
       PB ieee/std_logic_1164 1308643377 PB ieee/STD_LOGIC_UNSIGNED 1308643379
-AR work/multiplier32/arch_multiplier32 1381078421 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd \
-      EN work/multiplier32 1381078420
-FL C:/Users/Poornima/Documents/GitHub/cg3207/nor32.vhd 2013/10/07.00:52:28 O.61xd
-EN work/nor32 1381078416 FL C:/Users/Poornima/Documents/GitHub/cg3207/nor32.vhd \
+AR work/multiplier32/arch_multiplier32 1381326686 \
+      FL C:/Users/user/Documents/GitHub/cg3207/multiplier.vhd \
+      EN work/multiplier32 1381326685
+FL C:/Users/user/Documents/GitHub/cg3207/nor32.vhd 2013/10/09.09:58:20 O.61xd
+EN work/nor32 1381326883 FL C:/Users/user/Documents/GitHub/cg3207/nor32.vhd \
       PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
       PB ieee/STD_LOGIC_UNSIGNED 1308643379
-AR work/nor32/arch_nor32 1381078417 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/nor32.vhd EN work/nor32 1381078416
-FL C:/Users/Poornima/Documents/GitHub/cg3207/or32.vhd 2013/10/07.00:50:58 O.61xd
-EN work/or32 1381078412 FL C:/Users/Poornima/Documents/GitHub/cg3207/or32.vhd \
+AR work/nor32/arch_nor32 1381326884 \
+      FL C:/Users/user/Documents/GitHub/cg3207/nor32.vhd EN work/nor32 1381326883
+FL C:/Users/user/Documents/GitHub/cg3207/or32.vhd 2013/10/09.09:58:20 O.61xd
+EN work/or32 1381326879 FL C:/Users/user/Documents/GitHub/cg3207/or32.vhd \
       PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
       PB ieee/STD_LOGIC_UNSIGNED 1308643379
-AR work/or32/arch_or32 1381078413 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/or32.vhd EN work/or32 1381078412
-FL C:/Users/Poornima/Documents/GitHub/cg3207/xor32.vhd 2013/10/07.00:52:00 O.61xd
-EN work/xor32 1381078414 FL C:/Users/Poornima/Documents/GitHub/cg3207/xor32.vhd \
+AR work/or32/arch_or32 1381326880 \
+      FL C:/Users/user/Documents/GitHub/cg3207/or32.vhd EN work/or32 1381326879
+FL C:/Users/user/Documents/GitHub/cg3207/sll32.vhd 2013/10/09.21:41:57 O.61xd
+EN work/sll32 1381326889 FL C:/Users/user/Documents/GitHub/cg3207/sll32.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/sll32/arch_sll32 1381326890 \
+      FL C:/Users/user/Documents/GitHub/cg3207/sll32.vhd EN work/sll32 1381326889
+FL C:/Users/user/Documents/GitHub/cg3207/slt32.vhd 2013/10/09.10:03:29 O.61xd
+EN work/slt32 1381326877 FL C:/Users/user/Documents/GitHub/cg3207/slt32.vhd \
       PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
       PB ieee/STD_LOGIC_UNSIGNED 1308643379
-AR work/xor32/arch_xor32 1381078415 \
-      FL C:/Users/Poornima/Documents/GitHub/cg3207/xor32.vhd EN work/xor32 1381078414
+AR work/and32/arch_and32 1381326878 \
+      FL C:/Users/user/Documents/GitHub/cg3207/slt32.vhd EN work/and32 1381078410
+FL C:/Users/user/Documents/GitHub/cg3207/sra32.vhd 2013/10/09.22:10:19 O.61xd
+EN work/sra32 1381327821 FL C:/Users/user/Documents/GitHub/cg3207/sra32.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB ieee/std_logic_arith 1308643378 PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/sra32/arch_sra32 1381327822 \
+      FL C:/Users/user/Documents/GitHub/cg3207/sra32.vhd EN work/sra32 1381327821
+FL C:/Users/user/Documents/GitHub/cg3207/srl32.vhd 2013/10/09.21:52:23 O.61xd
+EN work/srl32 1381326892 FL C:/Users/user/Documents/GitHub/cg3207/srl32.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/NUMERIC_STD 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/srl32/arch_srl32 1381326893 \
+      FL C:/Users/user/Documents/GitHub/cg3207/srl32.vhd EN work/srl32 1381326892
+FL C:/Users/user/Documents/GitHub/cg3207/xor32.vhd 2013/10/09.09:58:20 O.61xd
+EN work/xor32 1381326881 FL C:/Users/user/Documents/GitHub/cg3207/xor32.vhd \
+      PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
+      PB ieee/STD_LOGIC_UNSIGNED 1308643379
+AR work/xor32/arch_xor32 1381326882 \
+      FL C:/Users/user/Documents/GitHub/cg3207/xor32.vhd EN work/xor32 1381326881
 FL C:/Users/user/Dropbox/Sem7/CG3207/LAB2/LAB2/adder32.vhd 2013/10/02.11:35:56 O.61xd
 FL C:/Users/user/Dropbox/Sem7/CG3207/LAB2/LAB2/alu.vhd 2013/10/02.11:43:28 O.61xd
 FL C:/Users/user/Dropbox/Sem7/CG3207/LAB2/LAB2/LAB2.vhd 2013/09/18.13:30:56 O.61xd
