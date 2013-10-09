@@ -1,0 +1,38 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/user/Documents/GitHub/cg3207/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/user/Documents/GitHub/cg3207/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/slt32 is now defined in a different file.  It was defined in "C:/Users/user/Documents/GitHub/cg3207/and32.vhd", and is now defined in "C:/Users/user/Documents/GitHub/cg3207/slt32.vhd".
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/slt32.vhd" in Library work.
+Architecture arch_and32 of Entity and32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/and32.vhd" in Library work.
+Entity <slt32> compiled.
+Entity <slt32> (Architecture <arch_slt32>) compiled.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> 
+
+Total memory usage is 198996 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

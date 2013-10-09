@@ -31,28 +31,27 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity and32 is
+entity slt32 is
     Port ( operand1 : in  STD_LOGIC_VECTOR (31 downto 0);
            operand2 : in  STD_LOGIC_VECTOR (31 downto 0);
            result1 : out  STD_LOGIC_VECTOR (31 downto 0);
            clk : in  STD_LOGIC);
-end and32;
+end slt32;
 
-architecture arch_and32 of and32 is
-
+architecture arch_slt32 of slt32 is
 signal result: std_logic_vector (31 downto 0):= "00000000000000000000000000000000";
-
 begin
 process(clk)
 
-
 begin
 if (clk'event and clk='1') then
-
-result <= operand1 and operand2;
-
+ if operand1 < operand2 then
+ result <= "00000000000000000000000000000001";
+ else
+ result <= "00000000000000000000000000000000";
+ end if;
 end if;
 
 result1 <= result;
 end process;
-end arch_and32;
+end arch_slt32;

@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: LAB2.prj
 
@@ -104,25 +104,33 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/and32.vhd" in Library work.
-Architecture arch_and32 of Entity and32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/or32.vhd" in Library work.
+WARNING:HDLParsers:3607 - Unit work/slt32 is now defined in a different file.  It was defined in "C:/Users/user/Documents/GitHub/cg3207/and32.vhd", and is now defined in "C:/Users/user/Documents/GitHub/cg3207/slt32.vhd".
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/or32.vhd" in Library work.
 Architecture arch_or32 of Entity or32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/xor32.vhd" in Library work.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/xor32.vhd" in Library work.
 Architecture arch_xor32 of Entity xor32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/nor32.vhd" in Library work.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/nor32.vhd" in Library work.
 Architecture arch_nor32 of Entity nor32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd" in Library work.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/slt32.vhd" in Library work.
+Architecture arch_and32 of Entity and32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/beq32.vhd" in Library work.
+Architecture arch_beq32 of Entity beq32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/bne32.vhd" in Library work.
+Architecture arch_bne32 of Entity bne32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/sll32.vhd" in Library work.
+Architecture arch_sll32 of Entity sll32 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/adder32.vhd" in Library work.
 Architecture arch_adder32 of Entity adder32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd" in Library work.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/multiplier.vhd" in Library work.
 Architecture arch_multiplier32 of Entity multiplier32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/divider.vhd" in Library work.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/divider.vhd" in Library work.
 Architecture arch_divider32 of Entity divider32 is up to date.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/alu.vhd" in Library work.
-Entity <alu> compiled.
-Entity <alu> (Architecture <arch_alu>) compiled.
-Compiling vhdl file "C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd" in Library work.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/alu.vhd" in Library work.
+Architecture arch_alu of Entity alu is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd" in Library work.
 Architecture structural of Entity lab2 is up to date.
+Compiling vhdl file "C:/Users/user/Documents/GitHub/cg3207/and32.vhd" in Library work.
+Architecture arch_slt32 of Entity slt32 is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -139,6 +147,14 @@ Analyzing hierarchy for entity <xor32> in library <work> (architecture <arch_xor
 
 Analyzing hierarchy for entity <nor32> in library <work> (architecture <arch_nor32>).
 
+Analyzing hierarchy for entity <slt32> in library <work> (architecture <arch_slt32>).
+
+Analyzing hierarchy for entity <beq32> in library <work> (architecture <arch_beq32>).
+
+Analyzing hierarchy for entity <bne32> in library <work> (architecture <arch_bne32>).
+
+Analyzing hierarchy for entity <sll32> in library <work> (architecture <arch_sll32>).
+
 Analyzing hierarchy for entity <adder32> in library <work> (architecture <arch_adder32>).
 
 Analyzing hierarchy for entity <multiplier32> in library <work> (architecture <arch_multiplier32>).
@@ -150,46 +166,66 @@ Analyzing hierarchy for entity <divider32> in library <work> (architecture <arch
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <LAB2> in library <work> (Architecture <structural>).
-WARNING:Xst:753 - "C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'UART_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'GPI1_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'GPI2_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'GPI3_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'GPI4_Interrupt' of component 'mcs'.
-WARNING:Xst:753 - "C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'INTC_IRQ' of component 'mcs'.
-WARNING:Xst:2211 - "C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd" line 98: Instantiating black box module <mcs>.
+WARNING:Xst:753 - "C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'UART_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'GPI1_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'GPI2_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'GPI3_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'GPI4_Interrupt' of component 'mcs'.
+WARNING:Xst:753 - "C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd" line 98: Unconnected output port 'INTC_IRQ' of component 'mcs'.
+WARNING:Xst:2211 - "C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd" line 98: Instantiating black box module <mcs>.
 Entity <LAB2> analyzed. Unit <LAB2> generated.
 
 Analyzing Entity <alu> in library <work> (Architecture <arch_alu>).
 Entity <alu> analyzed. Unit <alu> generated.
 
 Analyzing Entity <and32> in library <work> (Architecture <arch_and32>).
-WARNING:Xst:819 - "C:/Users/Poornima/Documents/GitHub/cg3207/and32.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/slt32.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <result>
 Entity <and32> analyzed. Unit <and32> generated.
 
 Analyzing Entity <or32> in library <work> (Architecture <arch_or32>).
-WARNING:Xst:819 - "C:/Users/Poornima/Documents/GitHub/cg3207/or32.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/or32.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <result>
 Entity <or32> analyzed. Unit <or32> generated.
 
 Analyzing Entity <xor32> in library <work> (Architecture <arch_xor32>).
-WARNING:Xst:819 - "C:/Users/Poornima/Documents/GitHub/cg3207/xor32.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/xor32.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <result>
 Entity <xor32> analyzed. Unit <xor32> generated.
 
 Analyzing Entity <nor32> in library <work> (Architecture <arch_nor32>).
-WARNING:Xst:819 - "C:/Users/Poornima/Documents/GitHub/cg3207/nor32.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/nor32.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <result>
 Entity <nor32> analyzed. Unit <nor32> generated.
 
+Analyzing Entity <slt32> in library <work> (Architecture <arch_slt32>).
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/and32.vhd" line 44: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <result>
+Entity <slt32> analyzed. Unit <slt32> generated.
+
+Analyzing Entity <beq32> in library <work> (Architecture <arch_beq32>).
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/beq32.vhd" line 44: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <result>
+Entity <beq32> analyzed. Unit <beq32> generated.
+
+Analyzing Entity <bne32> in library <work> (Architecture <arch_bne32>).
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/bne32.vhd" line 44: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <result>
+Entity <bne32> analyzed. Unit <bne32> generated.
+
+Analyzing Entity <sll32> in library <work> (Architecture <arch_sll32>).
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/sll32.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <result>
+Entity <sll32> analyzed. Unit <sll32> generated.
+
 Analyzing Entity <adder32> in library <work> (Architecture <arch_adder32>).
-WARNING:Xst:1610 - "C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd" line 53: Width mismatch. <sum> has a width of 33 bits but assigned expression is 32-bit wide.
-WARNING:Xst:819 - "C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd" line 47: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:1610 - "C:/Users/user/Documents/GitHub/cg3207/adder32.vhd" line 53: Width mismatch. <sum> has a width of 33 bits but assigned expression is 32-bit wide.
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/adder32.vhd" line 47: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <sum>
 Entity <adder32> analyzed. Unit <adder32> generated.
 
 Analyzing Entity <multiplier32> in library <work> (Architecture <arch_multiplier32>).
-WARNING:Xst:819 - "C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "C:/Users/user/Documents/GitHub/cg3207/multiplier.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <mult_result>
 Entity <multiplier32> analyzed. Unit <multiplier32> generated.
 
@@ -204,7 +240,7 @@ Entity <divider32> analyzed. Unit <divider32> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <and32>.
-    Related source file is "C:/Users/Poornima/Documents/GitHub/cg3207/and32.vhd".
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/slt32.vhd".
     Found 32-bit register for signal <result>.
     Summary:
 	inferred  32 D-type flip-flop(s).
@@ -212,7 +248,7 @@ Unit <and32> synthesized.
 
 
 Synthesizing Unit <or32>.
-    Related source file is "C:/Users/Poornima/Documents/GitHub/cg3207/or32.vhd".
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/or32.vhd".
     Found 32-bit register for signal <result>.
     Summary:
 	inferred  32 D-type flip-flop(s).
@@ -220,7 +256,7 @@ Unit <or32> synthesized.
 
 
 Synthesizing Unit <xor32>.
-    Related source file is "C:/Users/Poornima/Documents/GitHub/cg3207/xor32.vhd".
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/xor32.vhd".
     Found 32-bit register for signal <result>.
     Found 32-bit xor2 for signal <result$xor0000> created at line 52.
     Summary:
@@ -229,15 +265,53 @@ Unit <xor32> synthesized.
 
 
 Synthesizing Unit <nor32>.
-    Related source file is "C:/Users/Poornima/Documents/GitHub/cg3207/nor32.vhd".
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/nor32.vhd".
     Found 32-bit register for signal <result>.
     Summary:
 	inferred  32 D-type flip-flop(s).
 Unit <nor32> synthesized.
 
 
+Synthesizing Unit <slt32>.
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/and32.vhd".
+    Found 32-bit register for signal <result>.
+    Found 32-bit comparator less for signal <result$cmp_lt0000> created at line 48.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <slt32> synthesized.
+
+
+Synthesizing Unit <beq32>.
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/beq32.vhd".
+    Found 32-bit register for signal <result>.
+    Found 32-bit comparator equal for signal <result$cmp_eq0000> created at line 48.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <beq32> synthesized.
+
+
+Synthesizing Unit <bne32>.
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/bne32.vhd".
+    Found 32-bit register for signal <result>.
+    Found 32-bit comparator not equal for signal <result$cmp_ne0000> created at line 48.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <bne32> synthesized.
+
+
+Synthesizing Unit <sll32>.
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/sll32.vhd".
+    Found 32-bit register for signal <result>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <sll32> synthesized.
+
+
 Synthesizing Unit <adder32>.
-    Related source file is "C:/Users/Poornima/Documents/GitHub/cg3207/adder32.vhd".
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/adder32.vhd".
     Found 33-bit register for signal <sum>.
     Found 32-bit adder for signal <sum$add0000> created at line 53.
     Summary:
@@ -247,7 +321,7 @@ Unit <adder32> synthesized.
 
 
 Synthesizing Unit <multiplier32>.
-    Related source file is "C:/Users/Poornima/Documents/GitHub/cg3207/multiplier.vhd".
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/multiplier.vhd".
     Found 64-bit register for signal <mult_result>.
     Found 32x32-bit multiplier for signal <mult_result$mult0000> created at line 51.
     Summary:
@@ -257,7 +331,7 @@ Unit <multiplier32> synthesized.
 
 
 Synthesizing Unit <divider32>.
-    Related source file is "C:/Users/Poornima/Documents/GitHub/cg3207/divider.vhd".
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/divider.vhd".
 WARNING:Xst:1780 - Signal <div_result> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <div_remainder> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 32-bit register for signal <count>.
@@ -294,14 +368,13 @@ Unit <divider32> synthesized.
 
 
 Synthesizing Unit <alu>.
-    Related source file is "C:/Users/Poornima/Documents/GitHub/cg3207/alu.vhd".
-WARNING:Xst:646 - Signal <result_xor> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <result_or> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <result_nor> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/alu.vhd".
+WARNING:Xst:1780 - Signal <result_srl> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <result_sll> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 32-bit register for signal <Debug>.
     Found 32-bit register for signal <Result1>.
     Found 32-bit register for signal <Result2>.
-    Found 32-bit adder for signal <final_Operand1$addsub0000> created at line 125.
+    Found 32-bit adder for signal <final_Operand1$addsub0000> created at line 172.
     Found 32-bit adder for signal <final_Operand3>.
     Found 32-bit adder for signal <operand3>.
     Summary:
@@ -311,14 +384,10 @@ Unit <alu> synthesized.
 
 
 Synthesizing Unit <LAB2>.
-    Related source file is "C:/Users/Poornima/Documents/GitHub/cg3207/LAB2.vhd".
+    Related source file is "C:/Users/user/Documents/GitHub/cg3207/LAB2.vhd".
 Unit <LAB2> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
-WARNING:Xst:524 - All outputs of the instance <or_32> of the block <or32> are unconnected in block <alu>.
-   This instance will be removed from the design along with all underlying logic
-WARNING:Xst:524 - All outputs of the instance <nor_32> of the block <nor32> are unconnected in block <alu>.
-   This instance will be removed from the design along with all underlying logic
 
 =========================================================================
 HDL Synthesis Report
@@ -329,12 +398,15 @@ Macro Statistics
 # Adders/Subtractors                                   : 31
  32-bit adder                                          : 15
  32-bit subtractor                                     : 16
-# Registers                                            : 15
- 32-bit register                                       : 9
+# Registers                                            : 21
+ 32-bit register                                       : 15
  33-bit register                                       : 4
  64-bit register                                       : 2
-# Comparators                                          : 12
+# Comparators                                          : 15
+ 32-bit comparator equal                               : 1
+ 32-bit comparator less                                : 1
  32-bit comparator lessequal                           : 12
+ 32-bit comparator not equal                           : 1
 # Multiplexers                                         : 10
  32-bit 4-to-1 multiplexer                             : 10
 # Xors                                                 : 1
@@ -348,8 +420,14 @@ Macro Statistics
 
 Reading core <mcs.ngc>.
 Loading core <mcs> for timing and area information for instance <mcs0>.
-WARNING:Xst:1290 - Hierarchical block <xor_32> is unconnected in block <alu0>.
+WARNING:Xst:1290 - Hierarchical block <shiftleft> is unconnected in block <alu0>.
    It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <result_1> in Unit <slt> is equivalent to the following 30 FFs/Latches, which will be removed : <result_2> <result_3> <result_4> <result_5> <result_6> <result_7> <result_8> <result_9> <result_10> <result_11> <result_12> <result_13> <result_14> <result_15> <result_16> <result_17> <result_18> <result_19> <result_20> <result_21> <result_22> <result_23> <result_24> <result_25> <result_26> <result_27> <result_28> <result_29> <result_30> <result_31> 
+INFO:Xst:2261 - The FF/Latch <result_1> in Unit <beq> is equivalent to the following 30 FFs/Latches, which will be removed : <result_2> <result_3> <result_4> <result_5> <result_6> <result_7> <result_8> <result_9> <result_10> <result_11> <result_12> <result_13> <result_14> <result_15> <result_16> <result_17> <result_18> <result_19> <result_20> <result_21> <result_22> <result_23> <result_24> <result_25> <result_26> <result_27> <result_28> <result_29> <result_30> <result_31> 
+INFO:Xst:2261 - The FF/Latch <result_1> in Unit <bne> is equivalent to the following 30 FFs/Latches, which will be removed : <result_2> <result_3> <result_4> <result_5> <result_6> <result_7> <result_8> <result_9> <result_10> <result_11> <result_12> <result_13> <result_14> <result_15> <result_16> <result_17> <result_18> <result_19> <result_20> <result_21> <result_22> <result_23> <result_24> <result_25> <result_26> <result_27> <result_28> <result_29> <result_30> <result_31> 
+WARNING:Xst:1293 - FF/Latch <result_1> has a constant value of 0 in block <slt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <result_1> has a constant value of 0 in block <beq>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <result_1> has a constant value of 0 in block <bne>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <sum_32> has a constant value of 0 in block <adder>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <sum_32> has a constant value of 0 in block <subtractor>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <sum_32> has a constant value of 0 in block <adder_u>. This FF/Latch will be trimmed during the optimization process.
@@ -371,10 +449,13 @@ Macro Statistics
 # Adders/Subtractors                                   : 31
  32-bit adder                                          : 15
  32-bit subtractor                                     : 16
-# Registers                                            : 420
- Flip-Flops                                            : 420
-# Comparators                                          : 12
+# Registers                                            : 612
+ Flip-Flops                                            : 612
+# Comparators                                          : 15
+ 32-bit comparator equal                               : 1
+ 32-bit comparator less                                : 1
  32-bit comparator lessequal                           : 12
+ 32-bit comparator not equal                           : 1
 # Multiplexers                                         : 10
  32-bit 4-to-1 multiplexer                             : 10
 # Xors                                                 : 1
@@ -385,51 +466,140 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1293 - FF/Latch <result_31> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_30> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_29> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_28> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_27> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_26> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_25> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_24> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_23> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_22> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_21> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_20> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_19> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_18> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_17> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_16> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_15> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_14> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_13> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_12> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_11> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_10> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_9> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_8> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_7> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_6> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_5> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_4> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_3> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_2> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_1> has a constant value of 0 in block <slt32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <result_31> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_30> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_29> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_28> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_27> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_26> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_25> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_24> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_23> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_22> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_21> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_20> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_19> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_18> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_17> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_16> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_15> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_14> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_13> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_12> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_11> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_10> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_9> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_8> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_7> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_6> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_5> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_4> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_3> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_2> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_1> has a constant value of 0 in block <beq32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <result_31> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_30> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_29> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_28> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_27> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_26> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_25> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_24> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_23> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_22> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_21> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_20> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_19> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_18> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_17> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_16> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_15> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_14> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_13> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_12> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_11> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_10> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_9> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_8> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_7> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_6> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_5> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_4> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_3> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_2> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <result_1> has a constant value of 0 in block <bne32>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <sum_32> has a constant value of 0 in block <adder32>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <xor_32/result_31> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_30> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_29> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_28> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_27> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_26> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_25> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_24> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_23> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_22> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_21> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_20> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_19> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_18> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_17> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_16> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_15> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_14> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_13> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_12> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_11> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_10> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_9> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_8> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_7> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_6> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_5> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_4> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_3> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_2> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_1> of sequential type is unconnected in block <alu>.
-WARNING:Xst:2677 - Node <xor_32/result_0> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_31> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_30> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_29> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_28> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_27> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_26> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_25> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_24> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_23> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_22> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_21> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_20> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_19> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_18> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_17> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_16> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_15> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_14> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_13> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_12> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_11> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_10> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_9> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_8> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_7> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_6> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_5> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_4> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_3> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_2> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_1> of sequential type is unconnected in block <alu>.
+WARNING:Xst:2677 - Node <shiftleft/result_0> of sequential type is unconnected in block <alu>.
 
 Optimizing unit <LAB2> ...
-
-Optimizing unit <or32> ...
-
-Optimizing unit <nor32> ...
 
 Optimizing unit <alu> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 52.
+Found area constraint ratio of 100 (+ 5) on block LAB2, actual ratio is 55.
 INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> in Unit <mcs0> is equivalent to the following 28 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i>
    <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> 
@@ -445,8 +615,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 512
- Flip-Flops                                            : 512
+# Registers                                            : 611
+ Flip-Flops                                            : 611
 
 =========================================================================
 
@@ -475,32 +645,32 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 6352
+# BELS                             : 6580
 #      GND                         : 2
-#      INV                         : 77
+#      INV                         : 79
 #      LUT1                        : 95
-#      LUT2                        : 849
+#      LUT2                        : 955
 #      LUT2_D                      : 8
 #      LUT2_L                      : 3
-#      LUT3                        : 578
+#      LUT3                        : 525
 #      LUT3_D                      : 2
 #      LUT3_L                      : 5
-#      LUT4                        : 1647
+#      LUT4                        : 1757
 #      LUT4_D                      : 4
 #      LUT4_L                      : 42
 #      MULT_AND                    : 40
-#      MUXCY                       : 1526
+#      MUXCY                       : 1590
 #      MUXCY_L                     : 77
-#      MUXF5                       : 165
+#      MUXF5                       : 164
 #      MUXF6                       : 1
 #      VCC                         : 2
 #      XORCY                       : 1229
-# FlipFlops/Latches                : 1103
-#      FD                          : 442
+# FlipFlops/Latches                : 1202
+#      FD                          : 506
 #      FDE                         : 141
-#      FDR                         : 168
+#      FDR                         : 214
 #      FDRE                        : 214
-#      FDRS                        : 98
+#      FDRS                        : 87
 #      FDRSE                       : 12
 #      FDS                         : 8
 #      FDSE                        : 20
@@ -524,10 +694,10 @@ Device utilization summary:
 
 Selected Device : 3s400aft256-4 
 
- Number of Slices:                     1863  out of   3584    51%  
- Number of Slice Flip Flops:           1103  out of   7168    15%  
- Number of 4 input LUTs:               3642  out of   7168    50%  
-    Number used as logic:              3310
+ Number of Slices:                     1942  out of   3584    54%  
+ Number of Slice Flip Flops:           1202  out of   7168    16%  
+ Number of 4 input LUTs:               3807  out of   7168    53%  
+    Number used as logic:              3475
     Number used as Shift registers:      50
     Number used as RAMs:                282
  Number of IOs:                          11
@@ -557,7 +727,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 1310  |
+Clk                                | BUFGP                  | 1409  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -568,7 +738,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 28.599ns (Maximum Frequency: 34.966MHz)
+   Minimum period: 28.732ns (Maximum Frequency: 34.805MHz)
    Minimum input arrival time before clock: 1.548ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 5.816ns
@@ -579,10 +749,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 28.599ns (frequency: 34.966MHz)
-  Total number of paths / destination ports: 439699709450 / 4227
+  Clock period: 28.732ns (frequency: 34.805MHz)
+  Total number of paths / destination ports: 439699710813 / 4315
 -------------------------------------------------------------------------
-Delay:               28.599ns (Levels of Logic = 81)
+Delay:               28.732ns (Levels of Logic = 81)
   Source:            mcs0/U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_0 (FF)
   Destination:       alu0/divider_u/remainder_31 (FF)
   Source Clock:      Clk rising
@@ -592,7 +762,7 @@ Delay:               28.599ns (Levels of Logic = 81)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            21   0.591   1.271  U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_0 (GPO3<0>)
+     FDRE:C->Q            26   0.591   1.403  U0/iomodule_0/IOModule_Core_I1/GPO_I3/gpo_io_i_0 (GPO3<0>)
      end scope: 'mcs0'
      LUT1:I0->O            1   0.648   0.000  alu0/Madd_operand3_cy<0>_rt (alu0/Madd_operand3_cy<0>_rt)
      MUXCY:S->O            1   0.632   0.000  alu0/Madd_operand3_cy<0> (alu0/Madd_operand3_cy<0>)
@@ -676,8 +846,8 @@ Delay:               28.599ns (Levels of Logic = 81)
      LUT3:I2->O            1   0.648   0.000  alu0/divider_u/Mmux_remainder_mux000550 (alu0/divider_u/remainder_mux0005<31>)
      FD:D                      0.252          alu0/divider_u/remainder_31
     ----------------------------------------
-    Total                     28.599ns (20.602ns logic, 7.997ns route)
-                                       (72.0% logic, 28.0% route)
+    Total                     28.732ns (20.602ns logic, 8.130ns route)
+                                       (71.7% logic, 28.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
@@ -740,14 +910,14 @@ Delay:               5.816ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 41.00 secs
-Total CPU time to Xst completion: 41.34 secs
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 29.88 secs
  
 --> 
 
-Total memory usage is 348652 kilobytes
+Total memory usage is 323004 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   59 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :  157 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
 
